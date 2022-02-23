@@ -1,44 +1,53 @@
+<!-- Halloween项目第一阶段实战 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
   <title>Halloween</title>
+  <!-- Font-icon Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="hw-header">
-    <nav class="hw-nav">
-      <a href="" class="hw-link">
-        <img class="hw-logo" src="" alt="">
+    <nav class="hw-nav hw-container">
+      <a href="/" class="hw-logo">
+        <img class="hw-logo-img" src="/img/logo.png" alt="Halloween">
         Halloween
       </a>
-      <div class="hw-nav-menu">
+      <div id="nav-menu" class="hw-nav-menu">
+        <img class="hw-nav-img" src="/img/nav-img.png">
+        <div id="nav-close" class="hw-nav-close">
+          <i class="bx bx-x"></i>
+        </div>
         <ul class="hw-list">
-          <li class="hw-list-item">
-            <a href="">Home</a>
+          <li class="hw-list-item active-item">
+            <a href="#home">Home</a>
           </li>
           <li class="hw-list-item">
-            <a href="">About</a>
+            <a href="#about">About</a>
           </li>
           <li class="hw-list-item">
-            <a href="">Candy</a>
+            <a href="#candy">Candy</a>
           </li>
           <li class="hw-list-item">
-            <a href="">New</a>
+            <a href="#new">New</a>
           </li>
-          <li class="hw-list-item">
-            <a href="">Support</a>
+          <li class="hw-list-support">
+            <a href="#support">Support</a>
           </li>
         </ul>
       </div>
-      <div class="hw-nav-close">
-        <i></i>
+      <div id="nav-open" class="hw-nav-menu-icon">
+        <i class="bx bx-grid-alt"></i>
       </div>
-      <img class="hw-nav-img" src="" alt="">
-      <div class="hw-nav-menu-icon"></div>
     </nav>
   </header>
 </body>
+<script src="/js/main.js"></script>
 </html>
