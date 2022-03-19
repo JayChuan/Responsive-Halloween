@@ -150,16 +150,20 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     padding: 2.5rem 0 3.5rem;
-    transform: translate3d(0, -100%, 0);
+    display: none;
+    /* transform: translate3d(0, -100%, 0); */
     background: var(--container-color);
+  }
+  .hw-nav-menu.menu__active {
+    display: block;
   }
   .hw-list {
     font-size: var(--h3-font-size);
   }
-  .hw-list-item,
+  /* .hw-list-item,
   .hw-list-support {
     opacity: 0;
-  }
+  } */
   .hw-list-item {
     text-transform: uppercase;
     font-weight: var(--font-bolder);
@@ -168,7 +172,7 @@ h1, h2, h3, h4 {
     transform: translateY(30%);
   }
   /* ---- Menu Open Anime ---- */
-  .menu__active {
+  /* .menu__active {
     transition: transform .3s cubic-bezier(0.22, 0.61, 0.36, 1);
     transform: translate3d(0, 0, 0);
   }
@@ -197,7 +201,7 @@ h1, h2, h3, h4 {
     transition: all .3s .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     opacity: 1;
     transform: translateY(-10%);
-  }
+  } */
 }
 
 /* ---- Menu List ---- */
@@ -221,8 +225,8 @@ h1, h2, h3, h4 {
   top: 0;
   left: 0;
   width: 6.25rem;
-  opacity: 0;
-  transform: translateY(-50%);
+  /* opacity: 0; */
+  /* transform: translateY(-50%); */
 }
 .hw-nav-close {
   position: absolute;
