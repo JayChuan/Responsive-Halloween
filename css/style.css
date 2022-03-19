@@ -142,6 +142,96 @@ h1, h2, h3, h4 {
   font-size: var(--h2-font-size);
   color: var(--title-color);
 }
+/* ---- HOME ---- */
+.hw-home-img {
+  position: relative;
+  text-align: center;
+}
+.hw-home-img img {
+  height: 282px;
+}
+.hw-home-img-intro {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.intro-text-top {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+.intro-text-bottom {
+  font-size: var(--smaller-font-size);
+}
+.hw-home-img-intro::before,
+.hw-home-img-intro::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  /* 通常用在不知道宽高的情况 */
+  /* transform: translate(-50%, -50%); */
+  background-color: var(--title-color);
+}
+.hw-home-img-intro::before {
+  width: 1px;
+  height: 3rem;
+  top: 130%;
+  /* 知道宽高 */
+  margin-left: -.5px;
+}
+.hw-home-img-intro::after {
+  width: .5rem;
+  height: .5rem;
+  top: calc(130% + 3rem);
+  margin-left: -.25rem;
+  border-radius: 50%;
+}
+.hw-home-subtitle {
+  margin: .65rem 0 1rem;
+  font-size: var(--h3-font-size);
+  text-transform: uppercase;
+}
+.hw-home-title {
+  line-height: 2.15rem;
+  font-weight: var(--font-bolder);
+  font-size: var(--biggest-font-size);
+}
+.hw-home-desc {
+  line-height: 1.4rem;
+  font-weight: 400;
+  margin: 1rem 0 2.5rem;
+    /* 不会出现... */
+  height: 5.6rem;
+  overflow: hidden;
+  /* 出现省略 */
+  /* overflow: hidden;
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; */
+}
+.hw-home-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+}
+.hw-home-book {
+  color: var(--white);
+  font-weight: var(--font-bold);
+  background-color: var(--first-color);
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+}
+.hw-home-url {
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-weight: var(--font-bold);
+  color: var(--white);
+}
 /* ---- Mobile ---- */
 @media screen and (max-width: 767px) {
   .hw-nav-menu {
@@ -150,20 +240,16 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     padding: 2.5rem 0 3.5rem;
-    display: none;
-    /* transform: translate3d(0, -100%, 0); */
+    transform: translate3d(0, -100%, 0);
     background: var(--container-color);
-  }
-  .hw-nav-menu.menu__active {
-    display: block;
   }
   .hw-list {
     font-size: var(--h3-font-size);
   }
-  /* .hw-list-item,
+  .hw-list-item,
   .hw-list-support {
     opacity: 0;
-  } */
+  }
   .hw-list-item {
     text-transform: uppercase;
     font-weight: var(--font-bolder);
@@ -172,7 +258,7 @@ h1, h2, h3, h4 {
     transform: translateY(30%);
   }
   /* ---- Menu Open Anime ---- */
-  /* .menu__active {
+  .menu__active {
     transition: transform .3s cubic-bezier(0.22, 0.61, 0.36, 1);
     transform: translate3d(0, 0, 0);
   }
@@ -201,7 +287,7 @@ h1, h2, h3, h4 {
     transition: all .3s .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     opacity: 1;
     transform: translateY(-10%);
-  } */
+  }
 }
 
 /* ---- Menu List ---- */
@@ -225,8 +311,8 @@ h1, h2, h3, h4 {
   top: 0;
   left: 0;
   width: 6.25rem;
-  /* opacity: 0; */
-  /* transform: translateY(-50%); */
+  opacity: 0;
+  transform: translateY(-50%);
 }
 .hw-nav-close {
   position: absolute;
