@@ -128,6 +128,21 @@ h1, h2, h3, h4 {
 .hw-main {
   overflow: hidden;
 }
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: .15rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  background: var(--container-color);
+  visibility: hidden;
+}
 /* ---- Header ---- */
 .hw-header {
   position: fixed;
@@ -136,7 +151,9 @@ h1, h2, h3, h4 {
   z-index: var(--z-fixed);
   width: 100%;
   /* height: var(--header-height); */
-  /* background: var(--container-color); */
+}
+.hw-header.scroll-header {
+  background: var(--container-color);
 }
 /* ---- Nav ---- */
 .hw-nav {
@@ -659,6 +676,7 @@ h1, h2, h3, h4 {
   .hw-home-img img {
     max-height: none;
     height: auto;
+    transform: translateY(-10%);
   }
   .hw-home-img-intro {
     top: -1.5rem;
@@ -907,5 +925,45 @@ h1, h2, h3, h4 {
   }
   .hw-footer-copy {
     margin-top: 6rem;
+  }
+}
+
+/* add swiper css  */
+.hw-home-main {
+  overflow: hidden;
+}
+.home-swiper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transform: translateX(0%);
+  transition: transform .3s ease-in-out;
+}
+.home-swiper-item {
+  flex-shrink: 0;
+  width: 100%;
+}
+.swiper-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.swiper-dots .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.swiper-dots .dot.active {
+  width: 20px;
+  border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .home-swiper-item {
+    display: flex;
+    align-items: center;
+    gap: 2.875rem;
   }
 }
